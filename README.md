@@ -8,7 +8,7 @@
      Lista de tarefas por interface de linha de comando
        <br />
     <br />
-    <a href="https://github.com/devchallenge-io/biblioteca-backend">Desafio</a>
+    <a href="https://github.com/stevescruz/Challenge-Task-List">Desafio</a>
     ·
     <a href="https://www.devchallenge.com.br/">DevChallenge</a>
   </p>
