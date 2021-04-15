@@ -18,6 +18,8 @@
 
 * [DevChallenge](#devchallenge) 
 * [Desafio](#desafio)
+* [Galeria da Fama](#galeria-da-fama)
+* [Requisitos](#requisitos)
 * [Techs](#techs)
 * [Como começar](#como-começar)
 * [Compartilhe](#compartilhe)
@@ -26,15 +28,15 @@
 <a href="https://devchallenge.now.sh/"> DevChallenge</a> permite que você evolua suas skills como programador! Participe da nossa <a href="https://discord.gg/yvYXhGj">comunidade</a> o/
 
 # Desafio
-Seu desafio é criar uma interface de linha de comando que lhe permite manter uma lista de tarefas com atividades pendentes e finalizadas!
+Seu desafio é criar uma interface de linha de comando que lhe permita manter uma lista de tarefas com atividades pendentes e finalizadas!
 
 # Galeria da Fama
-Os projetos mais interessantes criados pelos usuário serão exibidos nesta seção para servir de inspiração para quem vai fazer o desafio.
+Os projetos mais interessantes criados pelos usuários serão exibidos nesta seção para servir de inspiração para quem vai fazer o desafio. Portanto não apenas cumpre os requisitos, leve o seu projeto para o próximo nível.
 
 - [Task Master CLI](https://github.com/stevescruz/task-master) (JavaScript e Node.js) by [Steve](https://github.com/stevescruz).
 
-## Requisitos:
-Os seguintes requisitos deverão ser implementados em uma interface de linha de comando por meio de comandos, menu de opções ou outros métodos criativos.
+# Requisitos:
+Os seguintes requisitos deverão ser implementados em uma interface de linha de comando. Esse CLI deverá ser controlado por meio de comandos, menu de opções ou outros métodos criativos.
 1. <b>[adicionar tarefa]</b> :  Deverá ser possível cadastrar uma nova tarefa.
 
     Uma tarefa terá obrigatoriamente um id único, uma descrição, uma data de criação, o status (mostra se uma tarefa está pendente ou finalizada) e uma prioridade (pode ser alta, normal ou baixa). Exemplo:
@@ -47,44 +49,44 @@ Os seguintes requisitos deverão ser implementados em uma interface de linha de 
     Ao invés de mostrar a data de criação de cada tarefa, a propriedade deverá ser substituída por uma nova propriedade que mostra há quanto tempo a tarefa foi criada (1 mês). Exemplo:
 
     `[{ id: 1, descricao: 'Comprar 6 ovos', criado: 22 horas, status: 'pendente', prioridade: 'alta' }]`
-5. <b>[listar todas tarefas]</b> : Deverá ser possível listar todas tarefas, inclusive as que possuem um status de finalizada.
+5. <b>[listar todas tarefas]</b> : Deverá ser possível listar todas tarefas, inclusive as que possuem o status finalizada.
     
     Ao invés de mostrar a data de criação de cada tarefa, a propriedade deverá ser substituída por uma nova propriedade que mostra há quanto tempo a tarefa foi criada (1 mês).
-6. <b>[listar próximas tarefas]</b> : Deverá ser possível listar uma tarefa de cada prioridade. A tarefa listada será a mais antiga da prioridade.
+6. <b>[listar próximas tarefas]</b> : Deverá ser possível listar uma tarefa de cada prioridade, ou seja, uma tarefa de prioridade alta, uma tarefa de prioridade normal e uma tarefa de prioridade baixa, caso existam. A tarefa listada de cada prioridade será a mais antiga do seu grupo.
 
     Ao invés de mostrar a data de criação de cada tarefa, a propriedade deverá ser substituída por uma nova propriedade que mostra há quanto tempo a tarefa foi criada (1 mês).<br>
-7. Deverá haver persistência dos dados para que eles não sejam perdidos após a finalização da aplicação de interface de linha de comando.
+7. Deverá haver persistência dos dados para que eles não sejam perdidos após o fechamento da interface de linha de comando.
 
 # Techs: 
 - Tecnologia que preferir! Mas, temos algumas sugestões. :)
 
 ## JavaScript
 
-[Commander.js](https://github.com/tj/commander.js/) : ferramentas para criar uma aplicação de interface de linha de comando que permite o uso de comandos, argumentos e flags.
+[Commander.js](https://github.com/tj/commander.js/) : ferramentas para criar uma interface de linha de comando que permite o uso de comandos, argumentos e flags.
 
-[Inquirer.js](https://github.com/SBoudrias/Inquirer.js/) : permite criar aplicação de interface de linha de comando mais interativas que permitem criar perguntas, checklists e input de senhas.
+[Inquirer.js](https://github.com/SBoudrias/Inquirer.js/) : permite criar interfaces de linha de comando mais interativas. Lhe permitem criar perguntas, checklists e input de senhas.
 
 [Chalk](https://github.com/chalk/chalk) : permite a estilização de interfaces de linha de comando.
 
-[CLI Table 3](https://github.com/cli-table/cli-table3) : facilita a criação de tabelas e exibição de tabelas em interfaces de linha de comando.
+[CLI Table 3](https://github.com/cli-table/cli-table3) : facilita a criação e exibição de tabelas em interfaces de linha de comando.
 
 Outras opções: Vorpal.js, Caporal.js, Yargs.js, Glue Gun, Seeli.js, Figlet.js, Oclif, Meow, Color.js, Progressbar, Clui.js, Enquirer.
 
 ## Java
 
-Aceitamos sugestões de ferramentas do Java.
+Aceitamos sugestões de ferramentas do Java nos issues.
 
 ## PHP
 
-Aceitamos sugestões de ferramentas do PHP.
+Aceitamos sugestões de ferramentas do PHP nos issues.
 
 ## Python
 
-Aceitamos sugestões de ferramentas do Python.
+Aceitamos sugestões de ferramentas do Python nos issues.
 
 # Como começar:
 1 - Use esse template (clicando em *Use this template*) ou faça um fork deste repositório com o código inicial<br>
-2 - Leia as instruções no readme.md<br>
+2 - Leia as instruções no README.md<br>
 3 - Comece a codar! Sinta-se livre para utilizar o fluxo de trabalho que ache mais confortável<br>
 4 - Compartilhe seu resultado com a comunidade! Utilize a seguinte hashtag: #devchallenge
 
