@@ -8,7 +8,7 @@
      command-line based task list
        <br />
     <br />
-    <a href="https://github.com/stevescruz/Challenge-Task-List">Challenge</a>
+    <a href="https://www.devchallenge.com.br/challenges/607785ac40398e001f6046c6/details">Challenge</a>
     ·
     <a href="https://www.devchallenge.com.br/">DevChallenge</a>
   </p>
