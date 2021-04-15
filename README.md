@@ -55,7 +55,7 @@ Os seguintes requisitos deverão ser implementados em uma interface de linha de 
 6. <b>[listar próximas tarefas]</b> : Deverá ser possível listar uma tarefa de cada prioridade, ou seja, uma tarefa de prioridade alta, uma tarefa de prioridade normal e uma tarefa de prioridade baixa, caso existam. A tarefa listada de cada prioridade será a mais antiga do seu grupo.
 
     Ao invés de mostrar a data de criação de cada tarefa, a propriedade deverá ser substituída por uma nova propriedade que mostra há quanto tempo a tarefa foi criada (1 mês).<br>
-7. Deverá haver persistência dos dados para que eles não sejam perdidos após o fechamento da interface de linha de comando.
+7. <b>[arquivo local ou bancos de dados]</b> : Deverá haver persistência dos dados para que eles não sejam perdidos após o fechamento da interface de linha de comando.
 
 # Techs: 
 - Tecnologia que preferir! Mas, temos algumas sugestões. :)
