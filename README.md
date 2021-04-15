@@ -5,100 +5,106 @@
   <h3 align="center">Todo List CLI by <a href="https://github.com/stevescruz">Steve</a></h3>
  <br />
   <p align="center">
-     Lista de tarefas por interface de linha de comando
+     command-line based task list
        <br />
     <br />
-    <a href="https://github.com/stevescruz/Challenge-Task-List">Desafio</a>
+    <a href="https://github.com/stevescruz/Challenge-Task-List">Challenge</a>
     ·
     <a href="https://www.devchallenge.com.br/">DevChallenge</a>
   </p>
 </p>
 
-## Índice
+## Table of Contents
 
 * [DevChallenge](#devchallenge) 
-* [Desafio](#desafio)
-* [Galeria da Fama](#galeria-da-fama)
-* [Requisitos](#requisitos)
+* [Challenge](#challenge)
+* [Hall of Fame](#hall-of-fame)
+* [Requirements](#requirements)
 * [Techs](#techs)
-* [Como começar](#como-começar)
-* [Compartilhe](#compartilhe)
+* [How to start](#how-to-start)
+* [Share](#share)
+* [Community](#devchallenge-community)
+
+## Translations
+
+* :us: [EN-US](README.md)
+* :brazil: [PT-BR](translations/README_PT-BR.md)
 
 # DevChallenge
-<a href="https://devchallenge.now.sh/"> DevChallenge</a> permite que você evolua suas skills como programador! Participe da nossa <a href="https://discord.gg/yvYXhGj">comunidade</a> o/
+<a href="https://devchallenge.now.sh/"> DevChallenge</a> allows you to evolve your skills as a programmer! Join our <a href="https://discord.gg/yvYXhGj">community</a> o/
 
-# Desafio
-Seu desafio é criar uma interface de linha de comando que lhe permita manter uma lista de tarefas com atividades pendentes e finalizadas!
+# Challenge
+Your challenge is to create a command-line interface that allows you to maintain a task list with pending and done activities!
 
-# Galeria da Fama
-Os projetos mais interessantes criados pelos usuários serão exibidos nesta seção para servir de inspiração para quem vai fazer o desafio. Portanto não apenas cumpre os requisitos, leve o seu projeto para o próximo nível.
+# Hall of Fame
+The most interesting projects created by users will be displayed at this section to serve as inspiration for other people doing this challenge. Therefore, do not only fulfill the requirements, take your project to the next level.
 
-- [Task Master CLI](https://github.com/stevescruz/task-master) (JavaScript e Node.js) by [Steve](https://github.com/stevescruz).
+- [Task Master CLI](https://github.com/stevescruz/task-master) (JavaScript and Node.js) by [Steve](https://github.com/stevescruz).
 
-# Requisitos:
-Os seguintes requisitos deverão ser implementados em uma interface de linha de comando. Esse CLI deverá ser controlado por meio de comandos, menu de opções ou outros métodos criativos.
-1. <b>[adicionar tarefa]</b> :  Deverá ser possível cadastrar uma nova tarefa.
+# Requirements:
+The following requirements should be implemented in a command-line interface. This CLI should be controlled by using commands, a menu with options or other creative methods.
+1. <b>[add task]</b> : It should be possible to register a new task.
 
-    Uma tarefa terá obrigatoriamente um id único, uma descrição, uma data de criação, o status (mostra se uma tarefa está pendente ou finalizada) e uma prioridade (pode ser alta, normal ou baixa). Exemplo:
+    A task must have a unique id, a description, a creation date, a status (shows if a task is pending or done) and a priority (high, normal or low). Example:
     
-    `{ id: 1, descricao: 'Comprar 6 ovos', criado: 2021-04-01T20:54:19.410Z, status: 'pendente', prioridade: 'alta' };`
-2. <b>[marcar tarefa como finalizada]</b> : Deverá ser possível alterar o status de uma tarefa para finalizada.
-3. <b>[deletar tarefa]</b> : Deverá ser possível deletar uma tarefa informando o id correspondente a ela.
-4. <b>[listar tarefas]</b> : Deverá ser possível listar as tarefas que possuem um status diferente de finalizada.
+    `{ id: 1, description: 'Buy 6 eggs', created: 2021-04-01T20:54:19.410Z, status: 'pending', priority: 'high' };`
+2. <b>[mark task as done]</b> : Should be able to update a task's status to done.
+3. <b>[delete task]</b> : Should be able to delete a task by providing its corresponding id.
+4. <b>[list tasks]</b> : Should be able to list the tasks with status that isn't done.
     
-    Ao invés de mostrar a data de criação de cada tarefa, a propriedade deverá ser substituída por uma nova propriedade que mostra há quanto tempo a tarefa foi criada (1 mês). Exemplo:
+    Instead of showing the creation date of each task, that property should be substituted by a new property that displays how long ago the task was created (1 month). Example:
 
-    `[{ id: 1, descricao: 'Comprar 6 ovos', criado: 22 horas, status: 'pendente', prioridade: 'alta' }]`
-5. <b>[listar todas tarefas]</b> : Deverá ser possível listar todas tarefas, inclusive as que possuem o status finalizada.
+    `[{ id: 1, description: 'Buy 6 eggs', age: 22 hours, status: 'pending', priority: 'high' }]`
+5. <b>[list all tasks]</b> : Should be able to list all tasks, including those with status done.
     
-    Ao invés de mostrar a data de criação de cada tarefa, a propriedade deverá ser substituída por uma nova propriedade que mostra há quanto tempo a tarefa foi criada (1 mês).
-6. <b>[listar próximas tarefas]</b> : Deverá ser possível listar uma tarefa de cada prioridade, ou seja, uma tarefa de prioridade alta, uma tarefa de prioridade normal e uma tarefa de prioridade baixa, caso existam. A tarefa listada de cada prioridade será a mais antiga do seu grupo.
+    Instead of showing the creation date of each task, that property should be substituted by a new property that displays how long ago the task was created (1 month).
+6. <b>[list next tasks]</b> : Should be able to list a task from each priority. In other words, a high priority task, a normal priority task and a low priority task, if they exist. The listed task of each priority with be the oldest from its group.
 
-    Ao invés de mostrar a data de criação de cada tarefa, a propriedade deverá ser substituída por uma nova propriedade que mostra há quanto tempo a tarefa foi criada (1 mês).<br>
-7. <b>[arquivo local ou bancos de dados]</b> : Deverá haver persistência dos dados para que eles não sejam perdidos após o fechamento da interface de linha de comando.
+    Instead of showing the creation date of each task, that property should be substituted by a new property that displays how long ago the task was created (1 month).<br>
+7. <b>[local file or database]</b> : Should be able to persist data so it isn't lost after the CLI finishes execution.
 
 # Techs: 
-- Tecnologia que preferir! Mas, temos algumas sugestões. :)
+- Any technology that you prefer! But, we have some suggestions. :)
 
 ## JavaScript
 
-[Commander.js](https://github.com/tj/commander.js/) : ferramentas para criar uma interface de linha de comando que permite o uso de comandos, argumentos e flags.
+[Commander.js](https://github.com/tj/commander.js/) : tool for creating command-line interfaces that allow the usage of commands, arguments and flags.
 
-[Inquirer.js](https://github.com/SBoudrias/Inquirer.js/) : permite criar interfaces de linha de comando mais interativas. Lhe permitem criar perguntas, checklists e input de senhas.
+[Inquirer.js](https://github.com/SBoudrias/Inquirer.js/) : allows us to create more interactive command-line interfaces. So it can ask questions, display checklists and hide password input.
 
-[Chalk](https://github.com/chalk/chalk) : permite a estilização de interfaces de linha de comando.
+[Chalk](https://github.com/chalk/chalk) : allows us to style command-line interfaces.
 
-[CLI Table 3](https://github.com/cli-table/cli-table3) : facilita a criação e exibição de tabelas em interfaces de linha de comando.
+[CLI Table 3](https://github.com/cli-table/cli-table3) : makes it easier to create and display tables in command-line interfaces.
 
-Outras opções: Vorpal.js, Caporal.js, Yargs.js, Glue Gun, Seeli.js, Figlet.js, Oclif, Meow, Color.js, Progressbar, Clui.js, Enquirer.
+Other options: Vorpal.js, Caporal.js, Yargs.js, Glue Gun, Seeli.js, Figlet.js, Oclif, Meow, Color.js, Progressbar, Clui.js, Enquirer.
 
 ## Java
 
-Aceitamos sugestões de ferramentas do Java nos issues.
+Suggest Java tools at our Discussions section.
 
 ## PHP
 
-Aceitamos sugestões de ferramentas do PHP nos issues.
+Suggest PHP tools at our Discussions section.
 
 ## Python
 
-Aceitamos sugestões de ferramentas do Python nos issues.
+Suggest Python tools at our Discussions section.
 
-# Como começar:
-1 - Use esse template (clicando em *Use this template*) ou faça um fork deste repositório com o código inicial<br>
-2 - Leia as instruções no README.md<br>
-3 - Comece a codar! Sinta-se livre para utilizar o fluxo de trabalho que ache mais confortável<br>
-4 - Compartilhe seu resultado com a comunidade! Utilize a seguinte hashtag: #devchallenge
+# How to start:
+1 - Use this template (click at *Use this template*) or fork this repository with the instruction<br>
+2 - Read the instructions at README.md<br>
+3 - Start to code! Feel free to use the workflow that is the most confortable for you.<br>
+4 - Share your results with the community! Use the following hashtag: #devchallenge
 
-# Compartilhe!
-Inicie seu projeto utilizando esse template no seu GitHub como um repositório público<br>
-Faça um print, GIF ou vídeo e compartilhe o resultado com a #devchallenge ou marcando nosso perfil @devchallenge!<br>
+# Share!
+Start you project using this template in your GitHub as a public repository<br>
+Capture a screenshot, GIF or video share the results with #devchallenge or tagging our account @devchallenge!<br>
 
-Desafio criado por <a href="https://www.linkedin.com/in/stevescruz/">Steve</a> :)
+Challenge created by <a href="https://www.linkedin.com/in/stevescruz/">Steve</a> :)
 
 
-# Comunidade DevChallenge
-Site: https://www.devchallenge.com.br/ <br>
+# DevChallenge Community
+Website: https://www.devchallenge.com.br/ <br>
 Discord: https://discord.gg/yvYXhGj <br>
 LinkedIn: https://www.linkedin.com/company/devchallenge/<br>
 Twitter: https://twitter.com/dev_challenge<br>
