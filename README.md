@@ -63,6 +63,15 @@ The following requirements should be implemented in a command-line interface. Th
     Instead of showing the creation date of each task, that property should be substituted by a new property that displays how long ago the task was created (1 month).<br>
 7. <b>[local file or database]</b> : Should be able to persist data so it isn't lost after the CLI finishes execution.
 
+8.  Command line programs must have commands and arguments, then you can use this template in you CLI:
+    <ul>
+       <li><b> task-master task (-o|--operation) add (-d|--description) "Buy some apples"</b></li>
+       <li><b> task-master task (-o|--operation) finish (-t|--task) TASK_ID -> complete task </b></li>
+       <li><b> task-master task (-o|--operation) delete (-t|--task) TASK_ID -> delete task </b></li>
+       <li><b> task-master task (-l|--list-all) -> list all tasks </b></li>
+       <li><b> task-master task (-ln|--list-next) -> list all tasks </b></li>
+    </ul>
+
 # Techs: 
 - Any technology that you prefer! But, we have some suggestions. :)
 
