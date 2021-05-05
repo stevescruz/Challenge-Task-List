@@ -1,6 +1,6 @@
 <br />
 <p align="center">
-    <img src="https://res.cloudinary.com/dmct8cfu9/image/upload/v1618085857/task-master_task-add_wzpz3g.png" alt="Logo" width="250">
+    <img src="https://res.cloudinary.com/dmct8cfu9/image/upload/v1620183656/carbon_todolist-cli.png" alt="Logo" width="250">
 
   <h3 align="center">Todo List CLI by <a href="https://github.com/stevescruz">Steve</a></h3>
  <br />
