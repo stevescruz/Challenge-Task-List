@@ -37,26 +37,42 @@ Os projetos mais interessantes criados pelos usuários serão exibidos nesta se�
 - [Task Master CLI](https://github.com/stevescruz/task-master) (JavaScript e Node.js) by [Steve](https://github.com/stevescruz).
 
 # Requisitos:
-Os seguintes requisitos deverão ser implementados em uma interface de linha de comando. Esse CLI deverá ser controlado por meio de comandos, menu de opções ou outros métodos criativos.
-1. <b>[adicionar tarefa]</b> : Deverá ser possível cadastrar uma nova tarefa.
+Os seguintes requisitos deverão ser implementados em uma interface de linha de comando. Esse CLI deverá ser controlado por meio de comandos (incluindo subcomandos e argumentos), menu de opções ou outros métodos criativos.
+1. **[opcional]** Se você decidir usar comandos tenha em mente que eles deverão ser uma ação explícita, enquanto argumentos usam um traço (`-a` ou `--argumento`) e são responsáveis por modificar o comportamento de um comando. Examplo:
+
+```bash
+task <subcommand> # Aceita add, complete, delete, list e next como subcomandos
+
+task add <description> [-p <priority>] # Adiciona uma tarefa pendente. Pode definir a prioridade da tarefa como baixa, normal ou alta com a opção -p (or --priority)
+
+task complete <id> # Marca uma tarefa como concluída
+task delete <id> # Deleta uma tarefa
+task list [-a] # Mostra as tarefas pendentes. A opção -a (or --all) mostra todas as tarefas (pendentes e concluídas)
+task next # Mostra a próxima tarefa de cada prioridade
+```
+2. **[adicionar tarefa]** : Deverá ser possível cadastrar uma nova tarefa.
 
     Uma tarefa terá obrigatoriamente um id único, uma descrição, uma data de criação, o status (mostra se uma tarefa está pendente ou finalizada) e uma prioridade (pode ser alta, normal ou baixa). Exemplo:
     
-    `{ id: 1, descricao: 'Comprar 6 ovos', criado: 2021-04-01T20:54:19.410Z, status: 'pendente', prioridade: 'alta' };`
-2. <b>[marcar tarefa como finalizada]</b> : Deverá ser possível alterar o status de uma tarefa para finalizada.
-3. <b>[deletar tarefa]</b> : Deverá ser possível deletar uma tarefa informando o id correspondente a ela.
-4. <b>[listar tarefas]</b> : Deverá ser possível listar as tarefas que possuem um status diferente de finalizada.
+    ```js
+    { id: 1, descricao: 'Comprar 6 ovos', criado: 2021-04-01T20:54:19.410Z, status: 'pendente', prioridade: 'alta' };
+    ```
+3. **[marcar tarefa como finalizada]** : Deverá ser possível alterar o status de uma tarefa para finalizada.
+4. **[deletar tarefa]** : Deverá ser possível deletar uma tarefa informando o id correspondente a ela.
+5. **[listar tarefas]** : Deverá ser possível listar as tarefas que possuem um status diferente de finalizada.
     
     Ao invés de mostrar a data de criação de cada tarefa, a propriedade deverá ser substituída por uma nova propriedade que mostra há quanto tempo a tarefa foi criada (1 mês). Exemplo:
 
-    `[{ id: 1, descricao: 'Comprar 6 ovos', criado: 22 horas, status: 'pendente', prioridade: 'alta' }]`
-5. <b>[listar todas tarefas]</b> : Deverá ser possível listar todas tarefas, inclusive as que possuem o status finalizada.
+    ```js
+    [{ id: 1, descricao: 'Comprar 6 ovos', criado: 22 horas, status: 'pendente', prioridade: 'alta' }]
+    ```
+6. **[listar todas tarefas]** : Deverá ser possível listar todas tarefas, inclusive as que possuem o status finalizada.
     
     Ao invés de mostrar a data de criação de cada tarefa, a propriedade deverá ser substituída por uma nova propriedade que mostra há quanto tempo a tarefa foi criada (1 mês).
-6. <b>[listar próximas tarefas]</b> : Deverá ser possível listar uma tarefa de cada prioridade, ou seja, uma tarefa de prioridade alta, uma tarefa de prioridade normal e uma tarefa de prioridade baixa, caso existam. A tarefa listada de cada prioridade será a mais antiga do seu grupo.
+7. **[listar próximas tarefas]** : Deverá ser possível listar uma tarefa de cada prioridade, ou seja, uma tarefa de prioridade alta, uma tarefa de prioridade normal e uma tarefa de prioridade baixa, caso existam. A tarefa listada de cada prioridade será a mais antiga do seu grupo.
 
-    Ao invés de mostrar a data de criação de cada tarefa, a propriedade deverá ser substituída por uma nova propriedade que mostra há quanto tempo a tarefa foi criada (1 mês).<br>
-7. <b>[arquivo local ou bancos de dados]</b> : Deverá haver persistência dos dados para que eles não sejam perdidos após o fechamento da interface de linha de comando.
+    Ao invés de mostrar a data de criação de cada tarefa, a propriedade deverá ser substituída por uma nova propriedade que mostra há quanto tempo a tarefa foi criada (1 mês).
+8. **[arquivo local ou bancos de dados]** : Deverá haver persistência dos dados para que eles não sejam perdidos após o fechamento da interface de linha de comando.
 
 # Techs: 
 - Tecnologia que preferir! Mas, temos algumas sugestões. :)
@@ -69,9 +85,9 @@ Os seguintes requisitos deverão ser implementados em uma interface de linha de 
 
 [Chalk](https://github.com/chalk/chalk) : permite a estilização de interfaces de linha de comando.
 
-[CLI Table 3](https://github.com/cli-table/cli-table3) : facilita a criação e exibição de tabelas em interfaces de linha de comando.
+[TTY Table](https://github.com/tecfu/tty-table) : facilita a criação e exibição de tabelas em interfaces de linha de comando.
 
-Outras opções: Vorpal.js, Caporal.js, Yargs.js, Glue Gun, Seeli.js, Figlet.js, Oclif, Meow, Color.js, Progressbar, Clui.js, Enquirer.
+Outras opções: Vorpal.js, Caporal.js, Yargs.js, Glue Gun, Seeli.js, Figlet.js, Oclif, Meow, Color.js, CLI Table 3, Progressbar, Clui.js, Enquirer.
 
 ## Java
 
@@ -96,7 +112,6 @@ Inicie seu projeto utilizando esse template no seu GitHub como um repositório p
 Faça um print, GIF ou vídeo e compartilhe o resultado com a #devchallenge ou marcando nosso perfil @devchallenge!<br>
 
 Desafio criado por <a href="https://www.linkedin.com/in/stevescruz/">Steve</a> :)
-
 
 # Comunidade DevChallenge
 Site: https://www.devchallenge.com.br/ <br>
